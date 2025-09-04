@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ultimate 1500+ Viral Mad Scientist Reels Bundle</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .container {
+    background: #fff;
+    max-width: 480px;
+    width: 100%;
+    padding: 30px 25px 40px 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  h1.headline {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #222;
+  }
+  .price {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: #222;
+  }
+  .price .original {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+    font-weight: 400;
+  }
+  img.bundle-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+    border-radius: 6px;
+  }
+  .description {
+    text-align: left;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  .description ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+  .description li {
+    margin-bottom: 10px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  input[type="email"],
+  input[type="tel"] {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1.8px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  input[type="email"]:focus,
+  input[type="tel"]:focus {
+    border-color: #007bff;
+  }
+  button.signup-btn {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button.signup-btn:hover {
+    background-color: #0056b3;
+  }
+  button.getnow-btn {
+    background-color: #28a745;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: none;
+    transition: background-color 0.3s ease;
+  }
+  button.getnow-btn:hover {
+    background-color: #1e7e34;
+  }
+  .error-msg {
+    color: #d93025;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: none;
+  }
+</style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="Ultimate 1500+ Viral Mad Scientist Reels Bundle Landing Page">
+    <h1 class="headline">Ultimate 1500+ Viral Mad Scientist Reels Bundle</h1>
+    <div class="price" aria-label="Price and discount">
+      Amount total <strong>₹69</strong><span class="original" aria-hidden="true">₹1393</span>
+    </div>
+    <img
+      src="https://picasso.cosmofeed.com/media.cosmofeed.com/ChatGPT_Image_May_30__2025__05_56_00_PM-removebg-preview-2025-04-06-12-59-37.png?w=600&q=100"
+      alt="Ultimate 1500+ Viral Mad Scientist Reels Bundle"
+      class="bundle-image"
+      loading="lazy"
+    />
+    <div class="description">
+      <ul>
+        <li>1500+ Viral Mad Scientist Reels Bundle</li>
+        <li>Hd Quality Videos In MP4 Format</li>
+        <li>Without Watermark</li>
+        <li>Ready To Post: With Background Music &amp; Text</li>
+        <li>Lifetime Access</li>
+        <li>Free Quality Bonuses Of Worth ₹10,000/-</li>
+      </ul>
+    </div>
+    <form id="signup-form" novalidate aria-label="Sign up form with email and phone number">
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+        aria-required="true"
+        aria-describedby="email-error"
+        autocomplete="email"
+      />
+      <div id="email-error" class="error-msg" role="alert"></div>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Enter your phone number"
+        required
+        aria-required="true"
+        aria-describedby="phone-error"
+        pattern="^\+?\d{7,15}$"
+        autocomplete="tel"
+      />
+      <div id="phone-error" class="error-msg" role="alert"></div>
+      <button type="submit" class="signup-btn" aria-label="Sign up to enable purchase">Sign Up</button>
+    </form>
+    <button id="get-now-btn" class="getnow-btn" aria-label="Get Now and proceed to payment">Get Now</button>
+  </div>
+
+<script>
+  (function() {
+    const form = document.getElementById('signup-form');
+    const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
+    const emailError = document.getElementById('email-error');
+    const phoneError = document.getElementById('phone-error');
+    const getNowBtn = document.getElementById('get-now-btn');
+
+    // Razorpay payment link (replace with your actual Razorpay payment link)
+    const razorpayPaymentLink = "https://rzp.io/rzp/9w5TsLx";
+
+    function validateEmail(email) {
+      // Simple email regex
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+
+    function validatePhone(phone) {
+      // Accepts digits with optional leading +, length 7 to 15 digits
+      const re = /^\+?\d{7,15}$/;
+      return re.test(phone);
+    }
+
+    function showError(inputElem, errorElem, message) {
+      errorElem.textContent = message;
+      errorElem.style.display = 'block';
+      inputElem.setAttribute('aria-invalid', 'true');
+    }
+
+    function clearError(inputElem, errorElem) {
+      errorElem.textContent = '';
+      errorElem.style.display = 'none';
+      inputElem.removeAttribute('aria-invalid');
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      let valid = true;
+
+      const emailVal = emailInput.value.trim();
+      const phoneVal = phoneInput.value.trim();
+
+      if (!emailVal) {
+        showError(emailInput, emailError, 'Email is required.');
+        valid = false;
+      } else if (!validateEmail(emailVal)) {
+        showError(emailInput, emailError, 'Please enter a valid email address.');
+        valid = false;
+      } else {
+        clearError(emailInput, emailError);
+      }
+
+      if (!phoneVal) {
+        showError(phoneInput, phoneError, 'Phone number is required.');
+        valid = false;
+      } else if (!validatePhone(phoneVal)) {
+        showError(phoneInput, phoneError, 'Please enter a valid phone number (7-15 digits, optional +).');
+        valid = false;
+      } else {
+        clearError(phoneInput, phoneError);
+      }
+
+      if (valid) {
+        // Disable form inputs and button to prevent multiple submissions
+        emailInput.disabled = true;
+        phoneInput.disabled = true;
+        form.querySelector('button[type="submit"]').disabled = true;
+
+        // Show the Get Now button
+        getNowBtn.style.display = 'inline-block';
+
+        // Optionally, you can store the email and phone in localStorage or send to backend here
+
+        // Scroll to Get Now button for better UX
+        getNowBtn.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
+    getNowBtn.addEventListener('click', function() {
+      // Redirect to Razorpay payment link
+      window.location.href = razorpayPaymentLink;
+    });
+  })();
+</script>
+</body>
+</html>
